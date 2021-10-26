@@ -42,6 +42,7 @@ func Build(entries EntryResolver, dependencies DependencyManager, logs scribe.Em
 		logs.Title("%s %s", context.BuildpackInfo.Name, context.BuildpackInfo.Version)
 
 		logs.Process("Resolving CPython version")
+		fmt.Println("code change!")
 
 		entry, sortedEntries := entries.Resolve(Cpython, context.Plan.Entries, Priorities)
 		logs.Candidates(sortedEntries)
