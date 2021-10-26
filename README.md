@@ -16,7 +16,7 @@ The buildpack will do the following:
   - Sets the `PYTHONPATH` to the `cpython` layer path.
   - Adds the newly installed `cpython` bin dir location to `PATH`
 * At run time:
-  - Does nothing
+  - Does nothingfffffe
 
 ## Configuration
 
