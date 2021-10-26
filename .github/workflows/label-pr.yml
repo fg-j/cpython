@@ -7,6 +7,7 @@ on:
 jobs:
   semver:
     name: Minimal Semver Labels
+    runs-on: ubuntu-latest
     steps:
     - name: Auto-label Semver
       uses: paketo-buildpacks/github-config/actions/pull-request/auto-semver-label@autolabel
