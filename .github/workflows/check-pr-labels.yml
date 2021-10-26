@@ -3,6 +3,11 @@ on:
   pull_request:
     branches:
     - main
+    types:
+    - synchronize
+    - reopened
+    - labeled
+    - unlabeled
 
 concurrency: pr_labels
 
