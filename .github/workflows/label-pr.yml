@@ -4,17 +4,14 @@ on:
     branches:
     - main
 
+concurrency: pr_labels
+
 jobs:
-  semver:
-    name: Minimal Semver Labels
+  label-semver:
+    name: Reset semver label
     runs-on: ubuntu-latest
     steps:
     - name: Auto-label Semver
       uses: paketo-buildpacks/github-config/actions/pull-request/auto-semver-label@autolabel
       env:
         GITHUB_TOKEN: ${{ secrets.PAKETO_BOT_GITHUB_TOKEN }}
-    - uses: mheap/github-action-required-labels@v1
-      with:
-        count: 1
-        labels: semver:major, semver:minor, semver:patch
-        mode: exactly
